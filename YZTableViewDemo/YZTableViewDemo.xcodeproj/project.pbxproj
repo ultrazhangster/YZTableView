@@ -14,6 +14,7 @@
 		FBF7EDBF1C50366900545707 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBF7EDBD1C50366900545707 /* Main.storyboard */; };
 		FBF7EDC11C50366900545707 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBF7EDC01C50366900545707 /* Assets.xcassets */; };
 		FBF7EDC41C50366900545707 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBF7EDC21C50366900545707 /* LaunchScreen.storyboard */; };
+		FBF7EDCE1C503B9400545707 /* YZTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF7EDCD1C503B9400545707 /* YZTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		FBF7EDC01C50366900545707 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBF7EDC31C50366900545707 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBF7EDC51C50366900545707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBF7EDCC1C503B9400545707 /* YZTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZTableViewController.h; sourceTree = "<group>"; };
+		FBF7EDCD1C503B9400545707 /* YZTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 		FBF7EDB31C50366900545707 /* YZTableViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FBF7EDCB1C503B7800545707 /* YZTableView */,
 				FBF7EDB71C50366900545707 /* AppDelegate.h */,
 				FBF7EDB81C50366900545707 /* AppDelegate.m */,
 				FBF7EDBA1C50366900545707 /* ViewController.h */,
@@ -101,6 +105,15 @@
 				FBF7EDB51C50366900545707 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FBF7EDCB1C503B7800545707 /* YZTableView */ = {
+			isa = PBXGroup;
+			children = (
+				FBF7EDCC1C503B9400545707 /* YZTableViewController.h */,
+				FBF7EDCD1C503B9400545707 /* YZTableViewController.m */,
+			);
+			name = YZTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBF7EDCE1C503B9400545707 /* YZTableViewController.m in Sources */,
 				FBF7EDBC1C50366900545707 /* ViewController.m in Sources */,
 				FBF7EDB91C50366900545707 /* AppDelegate.m in Sources */,
 				FBF7EDB61C50366900545707 /* main.m in Sources */,
