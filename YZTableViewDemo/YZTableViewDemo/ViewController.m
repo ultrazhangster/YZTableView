@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "YZTableViewController.h"
 
 @interface ViewController ()
 
@@ -30,7 +31,18 @@
     self.showTableView.layer.borderColor = [UIColor orangeColor].CGColor;
     self.showTableView.layer.borderWidth = 3;
     
+    [self.showTableView addTarget:self action:@selector(showFancyTableView) forControlEvents:UIControlEventTouchUpInside];
+    
     [self.view addSubview:self.showTableView];
+}
+
+- (void)showFancyTableView
+{
+    YZTableViewController *tableVC = [YZTableViewController new];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tableVC];
+    
+    [self presentViewController:navController animated:YES completion:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
