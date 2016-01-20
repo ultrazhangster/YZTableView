@@ -23,7 +23,7 @@
     }];
     [self.tableView.mj_header beginRefreshing];
     
-    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         [weakSelf loadMoreData];
     }];
 }
