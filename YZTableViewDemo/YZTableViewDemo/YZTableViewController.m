@@ -15,6 +15,8 @@
 {
     [super viewDidLoad];
     
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([YZTableViewController class])];
+    
     [self setupFetchedResultsController];
     
     __weak typeof(self) weakSelf = self;
@@ -45,7 +47,7 @@
 {
     __weak typeof(self) weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [weakSelf loadMoreDataCompletedWithNoMoreData:YES];
+        [weakSelf loadMoreDataCompletedWithNoMoreData:NO];
     });
 }
 
@@ -62,6 +64,24 @@
 - (void)setupFetchedResultsController
 {
     
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 27;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass([YZTableViewController class])];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"row index : %ld", (long)indexPath.row];
+    return cell;
 }
 
 @end
