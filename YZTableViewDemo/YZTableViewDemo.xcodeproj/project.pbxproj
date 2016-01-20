@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021FCC1E04E8A9DD5F1C4D90 /* Pods_YZTableViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E77DB86F57D26D0D467EE7B3 /* Pods_YZTableViewDemo.framework */; };
 		FBF7EDB61C50366900545707 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF7EDB51C50366900545707 /* main.m */; };
 		FBF7EDB91C50366900545707 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF7EDB81C50366900545707 /* AppDelegate.m */; };
 		FBF7EDBC1C50366900545707 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF7EDBB1C50366900545707 /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E59481EECF2F3D03BBA01AF /* Pods-YZTableViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YZTableViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YZTableViewDemo/Pods-YZTableViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		B09B643B1E504607B1E87CE9 /* Pods-YZTableViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YZTableViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YZTableViewDemo/Pods-YZTableViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		E77DB86F57D26D0D467EE7B3 /* Pods_YZTableViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YZTableViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF7EDB11C50366900545707 /* YZTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YZTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF7EDB51C50366900545707 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FBF7EDB71C50366900545707 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				021FCC1E04E8A9DD5F1C4D90 /* Pods_YZTableViewDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E2B0C03D1C0BB262F40B464 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E59481EECF2F3D03BBA01AF /* Pods-YZTableViewDemo.debug.xcconfig */,
+				B09B643B1E504607B1E87CE9 /* Pods-YZTableViewDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AA7A7AAA8AE634091551E2DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E77DB86F57D26D0D467EE7B3 /* Pods_YZTableViewDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FBF7EDA81C50366900545707 = {
 			isa = PBXGroup;
 			children = (
 				FBF7EDB31C50366900545707 /* YZTableViewDemo */,
 				FBF7EDB21C50366900545707 /* Products */,
+				3E2B0C03D1C0BB262F40B464 /* Pods */,
+				AA7A7AAA8AE634091551E2DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FBF7EDC81C50366A00545707 /* Build configuration list for PBXNativeTarget "YZTableViewDemo" */;
 			buildPhases = (
+				930B02B0F4A4DB55801501DD /* Check Pods Manifest.lock */,
 				FBF7EDAD1C50366900545707 /* Sources */,
 				FBF7EDAE1C50366900545707 /* Frameworks */,
 				FBF7EDAF1C50366900545707 /* Resources */,
+				CCCD15AE93DFB86B7FDF27EA /* Embed Pods Frameworks */,
+				139704A45BE84E312B321C3E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +170,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		139704A45BE84E312B321C3E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YZTableViewDemo/Pods-YZTableViewDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		930B02B0F4A4DB55801501DD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CCCD15AE93DFB86B7FDF27EA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YZTableViewDemo/Pods-YZTableViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FBF7EDAD1C50366900545707 /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		FBF7EDC91C50366A00545707 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E59481EECF2F3D03BBA01AF /* Pods-YZTableViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YZTableViewDemo/Info.plist;
@@ -270,6 +346,7 @@
 		};
 		FBF7EDCA1C50366A00545707 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B09B643B1E504607B1E87CE9 /* Pods-YZTableViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YZTableViewDemo/Info.plist;
@@ -298,6 +375,7 @@
 				FBF7EDCA1C50366A00545707 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
