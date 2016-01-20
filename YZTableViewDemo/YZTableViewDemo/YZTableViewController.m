@@ -15,6 +15,8 @@
 {
     [super viewDidLoad];
     
+    [self setupFetchedResultsController];
+    
     __weak typeof(self) weakSelf = self;
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [weakSelf refreshData];

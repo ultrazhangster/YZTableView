@@ -16,5 +16,6 @@
 - (void)refreshData;
 - (void)loadMoreData;
 - (void)setupFetchedResultsController;
+//TODO handle enable and disable load more
 
 @end
