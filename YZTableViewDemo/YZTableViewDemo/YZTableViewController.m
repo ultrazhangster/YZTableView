@@ -32,18 +32,32 @@
 {
     __weak typeof(self) weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [weakSelf.tableView.mj_header endRefreshing];
+        [weakSelf refreshDataCompleted];
     });
+}
+
+- (void)refreshDataCompleted
+{
+    [self.tableView.mj_header endRefreshing];
 }
 
 - (void)loadMoreData
 {
     __weak typeof(self) weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [weakSelf.tableView.mj_footer endRefreshing];
+        [weakSelf loadMoreDataCompletedWithNoMoreData:YES];
     });
 }
 
+- (void)loadMoreDataCompletedWithNoMoreData:(BOOL)noMoreData
+{
+    if (!noMoreData) {
+        [self.tableView.mj_footer endRefreshing];
+    }
+    else {
+        [self.tableView.mj_footer endRefreshingWithNoMoreData];
+    }
+}
 
 - (void)setupFetchedResultsController
 {

@@ -14,7 +14,9 @@
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
 - (void)refreshData;
+- (void)refreshDataCompleted;
 - (void)loadMoreData;
+- (void)loadMoreDataCompletedWithNoMoreData:(BOOL)noMoreData;
 - (void)setupFetchedResultsController;
 //TODO handle enable and disable load more
 
